@@ -136,7 +136,7 @@ client.on('messageCreate', async (message) => {
     }
     const bal = getBalance(target.id);
     return message.reply(
-      `🏧 | **${target.user.username}**, you currently have **${bal.toLocaleString()}** cowoncy!`
+      `<:owo_cash:1515357631466705039> | **${target.user.username}**, you currently have **${bal.toLocaleString()}** cowoncy!`
     );
   }
 
