@@ -115,7 +115,7 @@ client.on('messageCreate', async (message) => {
     }
     const bal = getBalance(message.author.id);
     return message.channel.send(
-      `<:owo_cash:1515357631466705039> | **${message.author.username}**, you currently have **__${bal.toLocaleString()}__** cowoncy!`
+      `<:owo_cash:1515357631466705039> | **${message.author.displayName}**, you currently have **__${bal.toLocaleString()}__** cowoncy!`
     );
   }
 
@@ -136,7 +136,7 @@ client.on('messageCreate', async (message) => {
     }
     const bal = getBalance(target.id);
     return message.channel.send(
-      `**<:owo_cash:1515357631466705039> | ${target.user.username}**, you currently have **__${bal.toLocaleString()}__** cowoncy!`
+      `**<:owo_cash:1515357631466705039> | ${target.user.displayName}**, you currently have **__${bal.toLocaleString()}__** cowoncy!`
     );
   }
 
