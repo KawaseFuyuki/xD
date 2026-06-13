@@ -188,7 +188,7 @@ client.on('messageCreate', async (message) => {
     // - @username will give @target: (plain @ prefix, not Discord mention)
     // - Amount in a field as "  {amount}  cowoncy" with spaces
     const embed = new EmbedBuilder()
-      .setColor(459af8)
+      .setColor(0x459af8)
       .setDescription(
         `${senderName}, you are about to give cowoncy to ${targetName}\n\n` +
         `To confirm this transaction, click ✅ Confirm.\n` +
@@ -326,7 +326,7 @@ client.on('interactionCreate', async (interaction) => {
     // Edit embed — amount field gets accepted line appended, matching screenshot exactly:
     // "  100  cowoncy\n\nKunal gamer accepted! | Today at 18:51"
     const acceptedEmbed = EmbedBuilder.from(interaction.message.embeds[0])
-      .setColor(00ff14)
+      .setColor(0x00ff14)
       .spliceFields(0, 1, {
         name: '\u200b',
         value: `  ${tx.amount.toLocaleString()}  cowoncy\n\n${tx.senderName} accepted! | Today at ${getTimeString()}`,
@@ -337,7 +337,7 @@ client.on('interactionCreate', async (interaction) => {
     // Sent message — Discord mentions (@ping) matching screenshot
     // "🏧 | @Kunal gamer sent **100** cowoncy to @SUYOG_GAMERZYT! (edited)"
     return interaction.followUp(
-      `🏧 | <@${tx.senderId}> sent **${tx.amount.toLocaleString()}** cowoncy to <@${tx.targetId}>!`
+      `<:owo_cash:1515357631466705039> | <@${tx.senderId}> sent **${tx.amount.toLocaleString()}** cowoncy to <@${tx.targetId}>!`
     );
   }
 
