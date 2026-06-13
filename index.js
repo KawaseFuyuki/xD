@@ -200,7 +200,7 @@ client.on('messageCreate', async (message) => {
       )
       .addFields({
         name: '\u200b',
-        value: `  ``${amount.toLocaleString()}  cowoncy`` `,
+        value: `  ${amount.toLocaleString()}  cowoncy `,
       })
       .setTimestamp();
 
