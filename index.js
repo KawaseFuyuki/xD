@@ -188,7 +188,7 @@ client.on('messageCreate', async (message) => {
     // - @username will give @target: (plain @ prefix, not Discord mention)
     // - Amount in a field as "  {amount}  cowoncy" with spaces
     const embed = new EmbedBuilder()
-      .setColor(0x43b581)
+      .setColor(459af8)
       .setDescription(
         `${senderName}, you are about to give cowoncy to ${targetName}\n\n` +
         `To confirm this transaction, click ✅ Confirm.\n` +
@@ -200,7 +200,7 @@ client.on('messageCreate', async (message) => {
       )
       .addFields({
         name: '\u200b',
-        value: `  ${amount.toLocaleString()}  cowoncy`,
+        value: `  ``${amount.toLocaleString()}  cowoncy`` `,
       })
       .setTimestamp();
 
@@ -326,7 +326,7 @@ client.on('interactionCreate', async (interaction) => {
     // Edit embed — amount field gets accepted line appended, matching screenshot exactly:
     // "  100  cowoncy\n\nKunal gamer accepted! | Today at 18:51"
     const acceptedEmbed = EmbedBuilder.from(interaction.message.embeds[0])
-      .setColor(0x43b581)
+      .setColor(00ff14)
       .spliceFields(0, 1, {
         name: '\u200b',
         value: `  ${tx.amount.toLocaleString()}  cowoncy\n\n${tx.senderName} accepted! | Today at ${getTimeString()}`,
